@@ -88,6 +88,11 @@ video {
   vertical-align: baseline;
 }
 /*GENERAL STYLES*/
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -233,5 +238,24 @@ button:hover {
 
   .bordered {
     padding: 0;
+  }
+
+  /* Tittle Section */
+
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .title-container div {
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 210%;
+  }
+
+  button {
+    font-size: 1rem;
+    border-radius: 0;
   }
 }
