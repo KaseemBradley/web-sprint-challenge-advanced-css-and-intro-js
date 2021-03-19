@@ -262,9 +262,11 @@ function get20s(array){
   return nextArr
  }
 
-get20s(artists)
+get20s(artists) 
 
-// get20s(artists)
+// could not find correct method for chaecking through a range of numbers that are a string :/
+
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
