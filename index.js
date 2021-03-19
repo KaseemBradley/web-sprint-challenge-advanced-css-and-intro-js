@@ -248,14 +248,21 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
- function get20s(array){
-//   for(let i = 0; i < array.length; i++) {
-//   if(array[i].includes("19 - 19")) {
-//     let newArray = [array[i].names]
-//   }  
-//   }
-//   return newArray
+function get20s(array){
+  let nextArr = []
+  for (let i = 0; i < array.length; i++) {
+   if(array[i].years.includes("1904")) {
+     nextArr.push(array[i].name)
+   } 
+   if (array[i].years.includes("1907")) {
+     nextArr.push(array[i].name)
+   }
+  }
+
+  return nextArr
  }
+
+get20s(artists)
 
 // get20s(artists)
 
@@ -293,9 +300,21 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(array){
+    let obj = { 
+      id: 20,
+      name: "kaseem", 
+      years: "1997 - 2021",
+      genre: "web design", 
+      nationality: "american",
+      bio: "some sentences about me"
+    }  
+
+    array.push(obj)
+    return array
   }
+
+  addArtist(artists)
 
   
 
@@ -306,9 +325,18 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+  let newArr = []
+  for(let i = 0; i < array.length; i++) {
+    if (array[i]["paintings"] >= 100) { 
+      newArr.push(array[i].name)
+
+    }
+  }
+  return newArr
 }
+
+lotsOfArt(artists)
 
 
 
